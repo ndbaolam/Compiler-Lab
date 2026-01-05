@@ -382,11 +382,6 @@ void declareObject(Object* obj) {
       }
     }
   }
-  
-  // For global scope objects (constants, types, functions, procedures)
-  if (symtab->program != NULL && symtab->currentScope == symtab->program->progAttrs->scope) {
-    addObject(&(symtab->globalObjectList), obj);
-  }
 }
 
 
